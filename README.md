@@ -8,4 +8,4 @@ Test automation frameworks are a set of guidelines or rules to writing test case
 
 ![Alt text](/screenshots/capture_1.PNG?raw=true "Title")
 
-This project is based of the following [course](https://www.coursera.org/projects/building-test-automation-framework-using-selenium-and-testng]).
+This project is based of the following [course](https://www.coursera.org/projects/building-test-automation-framework-using-selenium-and-testng).
