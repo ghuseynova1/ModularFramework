@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="7126" started-at="2022-04-14T17:22:06 UTC" finished-at="2022-04-14T17:22:14 UTC">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="7126" started-at="2022-04-14T17:22:06 UTC" finished-at="2022-04-14T17:22:14 UTC">
+      <class name="com.guru99.tests.LoginTest">
+        <test-method status="PASS" signature="preSteup()[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="preSteup" is-config="true" duration-ms="166" started-at="2022-04-14T17:22:06 UTC" finished-at="2022-04-14T17:22:06 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSteup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="setup" is-config="true" duration-ms="3864" started-at="2022-04-14T17:22:06 UTC" finished-at="2022-04-14T17:22:10 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="verifyUserLoginWithCorrectCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="verifyUserLoginWithCorrectCredentials" duration-ms="1493" started-at="2022-04-14T17:22:10 UTC" finished-at="2022-04-14T17:22:12 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr399391]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EgYhUtE]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Guru99 Bank Manager Home Page] but found [Guru99 Bank Manager HomePage]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager Home Page] but found [Guru99 Bank Manager HomePage]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.guru99.tests.LoginTest.verifyUserLoginWithCorrectCredentials(LoginTest.java:25)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithCorrectCredentials -->
+        <test-method status="PASS" signature="postTestAction(org.testng.ITestResult)[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="postTestAction" is-config="true" duration-ms="779" started-at="2022-04-14T17:22:12 UTC" finished-at="2022-04-14T17:22:13 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredentials status=FAILURE method=LoginTest.verifyUserLoginWithCorrectCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTestAction -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="tearDown" is-config="true" duration-ms="900" started-at="2022-04-14T17:22:13 UTC" finished-at="2022-04-14T17:22:14 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="postTearDown()[pri:0, instance:com.guru99.tests.LoginTest@1c3a4799]" name="postTearDown" is-config="true" duration-ms="548" started-at="2022-04-14T17:22:14 UTC" finished-at="2022-04-14T17:22:14 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTearDown -->
+      </class> <!-- com.guru99.tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
