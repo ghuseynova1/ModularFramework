@@ -31,6 +31,10 @@ public class CommonDriver {
 //					//currentWorkingDirectory+
 //							"/usr/bin/chromedriver" );
 			driver = new ChromeDriver();
+
+			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		} else if (browserType.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver",
 					currentWorkingDirectory+ "/drivers/msedgedriver.exe" );
