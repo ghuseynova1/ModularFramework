@@ -20,7 +20,7 @@ jobs:
       - run: mkdir test-reports
       - run:
           name: Download Selenium
-          command: curl -O https://selenium-release.storage.googleapis.com/3.141.59/selenium-server-standalone-3.141.59.jar
+          command: curl -O https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
                   
         #   command: curl -O https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.4.jar
 
