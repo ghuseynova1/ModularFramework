@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 public class CommonDriver {
 	
 	private WebDriver driver; 
@@ -23,10 +23,13 @@ public class CommonDriver {
 		currentWorkingDirectory = System.getProperty("user.dir");
 		
 		if (browserType.equalsIgnoreCase("chrome")) {
-			
-			System.setProperty("webdriver.chrome.driver",
-					//currentWorkingDirectory+
-							"/usr/bin/chromedriver" );
+
+
+			WebDriverManager.chromedriver().setup();
+
+//			System.setProperty("webdriver.chrome.driver",
+//					//currentWorkingDirectory+
+//							"/usr/bin/chromedriver" );
 			driver = new ChromeDriver();
 		} else if (browserType.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver",
