@@ -29,6 +29,19 @@ jobs:
           name: Start Selenium
           command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
+
+      - run:
+          name: create docker network
+          command: docker network create grid
+     
+      - run:
+          name: install selenium-hub
+          command: docker run -d --rm -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.11.0
+          
+      - run:
+          name: install selenium-node
+          command: docker run -d --rm --net grid -e HUB_HOST=selenium-hub -v /dev/shm:/dev/shm selenium/standalone-chrome:96.0-20211123
+
       - run:
           name: Build
           command: mvn -B -DskipTests clean package 
