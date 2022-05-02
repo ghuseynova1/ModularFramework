@@ -3,7 +3,13 @@
   <groupId>org.coursera</groupId>
   <artifactId>ModularFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+
+
+
+	<properties>
+		<testng.files.location>testXmlFiles/</testng.files.location>
+		<testng.file>testLogin.xml</testng.file>
+	</properties>
    <build>
 		<pluginManagement>
 			<plugins>
@@ -23,7 +29,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<!-- TestNG suite XML files -->
-							<suiteXmlFile>testXmlFiles/amazonHomepage.xml</suiteXmlFile>
+							<suiteXmlFile>${testng.files.location}${testng.file}</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

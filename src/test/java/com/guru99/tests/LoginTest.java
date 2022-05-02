@@ -24,7 +24,5 @@ public class LoginTest extends BaseTest{
 		reportUtils.addTestLog(Status.INFO, "Comparing expected and actual title");
 		Assert.assertEquals(acttualTitle, expectedTitle);
 	}
-	
-	
-	
+
 }
