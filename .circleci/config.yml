@@ -10,26 +10,21 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
     - image: cimg/openjdk:17.0.3
-    - image: selenium/standalone-chrome:96.0-20211123
+    # - image: selenium/standalone-chrome:96.0-20211123
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
 
-    
-      - run: mkdir test-reports
       - run:
           name: Download Selenium
-          command: curl -O https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-                  
-        #   command: curl -O https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.4.jar
-
-         
+          command: |
+            curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
       - run:
           name: Start Selenium
-          command: java -jar selenium-server-standalone-3.141.59.jar -log test-reports/selenium.log
+          command: |
+            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-
      
 
       - run:
