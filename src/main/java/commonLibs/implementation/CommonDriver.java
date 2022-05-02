@@ -25,12 +25,17 @@ public class CommonDriver {
 		if (browserType.equalsIgnoreCase("chrome")) {
 
 
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+
+			//wdm.create();
+
+			//WebDriverManager.chromedriver().setup();
 
 //			System.setProperty("webdriver.chrome.driver",
 //					//currentWorkingDirectory+
 //							"/usr/bin/chromedriver" );
-			driver = new ChromeDriver();
+//			driver = new ChromeDriver();
+			driver = wdm.create();
 
 			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
