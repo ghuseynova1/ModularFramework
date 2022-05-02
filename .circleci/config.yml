@@ -30,9 +30,6 @@ jobs:
           command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
 
-      - run:
-          name: create docker network
-          command: docker network create grid
      
       - run:
           name: install selenium-hub
